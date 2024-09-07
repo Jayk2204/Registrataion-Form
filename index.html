@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration-form by Jaykishan</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background: linear-gradient(135deg, #ffcc70, #ff5757);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        .registration-form {
+            background: white;
+            padding: 40px;
+            border-radius: 10px;
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+            max-width: 400px;
+            width: 100%;
+            animation: fadeIn 1.5s ease-in-out;
+        }
+
+        .registration-form h2 {
+            text-align: center;
+            margin-bottom: 30px;
+            color: #333;
+        }
+
+        .form-group {
+            position: relative;
+            margin-bottom: 20px;
+        }
+
+        .form-group input, .form-group textarea {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-size: 16px;
+            transition: all 0.3s ease;
+        }
+
+        .form-group input:hover, .form-group textarea:hover {
+            border-color: #ff5757;
+        }
+
+        .form-group input:focus, .form-group textarea:focus {
+            outline: none;
+            box-shadow: 0 0 5px rgba(255, 87, 87, 0.7);
+        }
+
+        .form-group input::placeholder, .form-group textarea::placeholder {
+            color: #999;
+        }
+
+        .form-group label {
+            position: absolute;
+            top: -10px;
+            left: 10px;
+            background: white;
+            padding: 0 5px;
+            font-size: 14px;
+            color: #ff5757;
+        }
+
+        .submit-btn {
+            width: 100%;
+            padding: 10px;
+            background: #ff5757;
+            border: none;
+            border-radius: 5px;
+            color: white;
+            font-size: 16px;
+            cursor: pointer;
+            transition: background 0.3s ease;
+        }
+
+        .submit-btn:hover {
+            background: #ff4040;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .registration-form {
+                padding: 30px;
+            }
+
+            .registration-form h2 {
+                font-size: 24px;
+                margin-bottom: 25px;
+            }
+
+            .form-group input, .form-group textarea {
+                font-size: 14px;
+                padding: 8px;
+            }
+
+            .submit-btn {
+                font-size: 14px;
+                padding: 8px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .registration-form {
+                padding: 20px;
+            }
+
+            .registration-form h2 {
+                font-size: 20px;
+                margin-bottom: 20px;
+            }
+
+            .form-group input, .form-group textarea {
+                font-size: 12px;
+                padding: 6px;
+            }
+
+            .submit-btn {
+                font-size: 12px;
+                padding: 6px;
+            }
+        }
+
+        @media (min-width: 1024px) {
+            .registration-form {
+                max-width: 500px;
+            }
+        }
+
+    </style>
+</head>
+<body>
+
+    <div class="registration-form">
+        <h2>Share Your Problem</h2>
+        <form action="#" method="POST">
+		<form action="https://api.web3forms.com/submit" method="POST">
+
+    <!-- Replace with your Access Key -->
+    <input type="hidden" name="access_key" value="edf175c9-3368-4bfc-9a90-c9fe454c3924">
+            <div class="form-group">
+                <label for="name">Name</label>
+                <input type="text" id="name" name="name" placeholder="Enter your name" required>
+            </div>
+
+            <div class="form-group">
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" placeholder="Enter your email" required>
+            </div>
+
+            <div class="form-group">
+                <label for="mobile">Mobile Number</label>
+                <input type="tel" id="mobile" name="mobile" placeholder="Enter your mobile number" pattern="[0-9]{10}" required>
+            </div>
+
+            <div class="form-group">
+                <label for="problem">Write Your Problem</label>
+                <textarea id="problem" name="problem" placeholder="Describe your problem" rows="4" required></textarea>
+            </div>
+
+            <button type="submit" class="submit-btn">Submit</button>
+        </form>
+    </div>
+
+</body>
+</html>
